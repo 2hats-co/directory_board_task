@@ -19,7 +19,11 @@ body {
   /* min-height: 800px; */
 }
 
-/** Start DropBox (delete this)**/
+.hidden {
+    display: none;
+}
+
+/** Start DropBox **/
 
 .dropbox-container {
   /* background: rgba(0, 0, 0, .25); */
@@ -47,7 +51,6 @@ body {
 }
 
 /** End DropBox **/
-
 .container {
   padding: 24px;
   background-image: linear-gradient(-45deg, #9ecd5d, #4bb050);
@@ -117,7 +120,7 @@ p {
   overflow: auto;
 }
 
-.right .table {
+.right .table-display {
   width: 100%;
   table-layout: fixed;
   font-family: 'Gugi', sans-serif;
@@ -202,7 +205,7 @@ p {
   padding-left: 10px;
 }
 
-.table tr td:nth-child(2) {
+.table-display tr td:nth-child(2) {
   white-space: nowrap;
 }
 
@@ -259,7 +262,7 @@ tr {
   height: 80%;
 
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 0px;
 
   font-family: system-ui, sans-serif;
   font-size: 24px;
@@ -267,9 +270,8 @@ tr {
   position: relative;
   z-index: 999999;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 20px;
+  overflow: auto;
 }
 #modal-open {
   position: absolute;
@@ -309,9 +311,18 @@ tr {
   outline: none;
 }
 
+#fixedtable th {
+    text-align: center;
+}
+
+#makeEditable td, #logTable td,
+#makeEditable th, #logTable th {
+    font-size: 16px;
+}
+
 /** Media Queries **/
 @media (min-width: 1900px) {
-  .spinner span {
+    .spinner span {
     font-size: 58px;
     font-weight: 600;
   }
